@@ -1,0 +1,4 @@
+/target
+# Local TDLib session data if --data-dir points inside the repo
+/data
+*.log

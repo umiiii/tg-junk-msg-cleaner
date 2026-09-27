@@ -1,0 +1,28 @@
+[package]
+name = "tg-junk-msg-cleaner"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+description = "Delete Telegram messages that match keywords in a single chat, using TDLib"
+repository = "https://github.com/umiiii/tg-junk-msg-cleaner"
+readme = "README.md"
+keywords = ["telegram", "tdlib", "spam", "cli"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "tg-junk-cleaner"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4.5", features = ["derive", "env", "wrap_help"] }
+console = "0.16"
+ctrlc = "3"
+dialoguer = { version = "0.12", features = ["fuzzy-select"] }
+dirs = "6"
+indicatif = "0.18"
+libloading = "0.9"
+regex = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
